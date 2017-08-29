@@ -15,7 +15,7 @@ header > .container > p {
   z-index: 2;
 }
 
-img {
+.header-image {
   position: absolute;
   left: 0;
   top: 0;
@@ -36,15 +36,21 @@ section {
 }
 
 .main-image {
-  margin-top: 240px;
+  margin-top: 20px;
   margin-left: -200px;
   width: 350px;
   opacity: 1;
 }
 
 .dance-image {
-  margin-top: 275px;
-  margin-left: 100px;
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 135px;
   width: 350px;
   opacity: 1;
+}
+
+.facebook-image {
+  width: 150px;
+  padding-top: 10px;
 }

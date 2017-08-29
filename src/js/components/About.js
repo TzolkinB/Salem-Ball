@@ -7,7 +7,7 @@ class About extends React.Component {
     return (
       <div>
         <header>
-          <img src={ballroom} alt="Ballroom"/>
+          <img src={ballroom} className="header-image" alt="Ballroom"/>
           <div className="container text-center text-white">
             <h1>Salem 18th Century Masked* Ball</h1>
             <h2>Saturday October 7, 2017</h2>
