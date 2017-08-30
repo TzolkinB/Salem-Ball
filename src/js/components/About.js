@@ -1,5 +1,5 @@
 import React from 'react';
-import ballroom from '../../img/ballroom2.png';
+import ballroom from '../../img/ballroom-crop.png';
 import image1 from '../../img/image1.jpg';
 
 class About extends React.Component {
@@ -7,7 +7,7 @@ class About extends React.Component {
     return (
       <div>
         <header>
-          <img src={ballroom} className="header-image" alt="Ballroom"/>
+          <img src={ballroom} className="header-image img-fluid" alt="Ballroom"/>
           <div className="container text-center text-white">
             <h1>Salem 18th Century Masked* Ball</h1>
             <h2>Saturday October 7, 2017</h2>
