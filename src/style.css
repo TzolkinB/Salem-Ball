@@ -49,24 +49,32 @@ section {
 }
 
 /* Large devices (desktops) and up */
-@media only screen (min-width: 992px) {
+@media screen and (min-width: 992px) {
   header {
     padding: 156px 0 100px;
   }
 
-  #app > div > div > div > div:nth-child(2) > header > img {
-    top: 3em;
-  }
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media only screen (min-width: 768px) {
+@media screen and (min-width: 768px) {
   #app > div > div > div > div:nth-child(2) > header > img {
     top: 3em !important;
   }
 }
 
 /* Small devices (phones, 576px and up) */
-@media only screen (min-width: 576px) {
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  #app > div > div > div > div:nth-child(2) > header > img {
+    top: 3em !important;
+  }
+  header > .container > h1 {
+    font-size: 2rem !important;  
+  }
+  header > .container > h2 {
+    font-size: 1.5rem; 
+  }
+  header > .container > p {
+  }
 }
 
