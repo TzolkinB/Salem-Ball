@@ -25,7 +25,7 @@ class About extends React.Component {
                 <p>This year's event will be held at:</p>
                 <p>
                   Home Moravian Church | Fellowship Hall
-                <br/>529 Church Street, Winston-Salem, NC 27101
+                <br/><a href="https://www.google.com/maps/place/529+S+Church+St,+Winston-Salem,+NC+27101/@36.0881661,-80.2431452,17z/data=!3m1!4b1!4m5!3m4!1s0x8853ae51a38a76c5:0x3b21d61694fdca34!8m2!3d36.0881661!4d-80.2409565">529 Church Street, Winston-Salem, NC 27101</a>
                 </p>
                 <p>Parking is available at the Fines Arts Center of Salem College</p>
                 <p>General Event Information:</p>

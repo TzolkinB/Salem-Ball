@@ -2,6 +2,24 @@ body {
   background-color: #f7f5f2;
 }
 
+.navbar {
+  padding: 0px;
+}
+
+.navbar-navbrand {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li> a:focus {
+  background-color: #5c6166;
+}
+
+.nav-link {
+  padding: 19px 25px !important;
+}
+
 header {
   position: relative;
   overflow: hidden;
@@ -18,7 +36,7 @@ header > .container > p {
 .header-image {
   position: absolute;
   left: 0;
-  top: -2em;
+  top: -15em;
   width: 100%;
   height: auto;
   opacity: 0.8;
@@ -58,9 +76,6 @@ section {
 
 /* Medium devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
-  #app > div > div > div > div:nth-child(2) > header > img {
-    top: 3em !important;
-  }
 }
 
 /* Small devices (phones, 576px and up) */
@@ -69,20 +84,26 @@ section {
     top: 3em !important;
     height: 415px !important;
   }
+
   header > .container > h1 {
     font-size: 2rem !important;  
   }
+
   header > .container > h2 {
     font-size: 1.5rem; 
   }
-  header > .container > p {
-  }
+
   .main-image {
     margin-left: 0;
   }
+
+  #dances {
+    padding-left: 15px;
+  }
+
   .dance-image {
-    margin-top: 260px;
-    margin-left: 235px;
+    margin-top: 270px;
+    margin-left: 215px;
     width: 150px;
   }
 }
