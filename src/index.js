@@ -13,9 +13,9 @@ const App =() => (
 	<div>
 		<div role="main">
 			<Nav />
-      <About />
-      <Dances />
-      <Contact />
+      <About id="about" />
+      <Dances id="dances" />
+      <Contact id="contact"/>
 		</div>
 		<Footer />
 	</div>

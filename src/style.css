@@ -64,9 +64,10 @@ section {
 }
 
 /* Small devices (phones, 576px and up) */
-@media screen and (min-width: 576px) and (max-width: 767px) {
-  #app > div > div > div > div:nth-child(2) > header > img {
+@media screen and (max-width: 576px) {
+  header > img {
     top: 3em !important;
+    height: 415px !important;
   }
   header > .container > h1 {
     font-size: 2rem !important;  
@@ -75,6 +76,14 @@ section {
     font-size: 1.5rem; 
   }
   header > .container > p {
+  }
+  .main-image {
+    margin-left: 0;
+  }
+  .dance-image {
+    margin-top: 260px;
+    margin-left: 235px;
+    width: 150px;
   }
 }
 
