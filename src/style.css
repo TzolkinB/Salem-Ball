@@ -11,9 +11,12 @@ body {
   padding-bottom: 1rem;
 }
 
-.navbar-nav > li > a:hover,
-.navbar-nav > li> a:focus {
+.navbar-nav > li > a:hover {
   background-color: #5c6166;
+}
+
+.navbar-nav > li > a:active {
+  background-color: red !important;
 }
 
 .nav-link {
