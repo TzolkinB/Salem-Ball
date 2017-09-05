@@ -7,6 +7,7 @@ import Footer  from './js/ui/FooterComponent';
 import Dances  from './js/components/Dances';
 import Contact from './js/components/Contact';
 import About   from './js/components/About';
+import Gallery from './js/components/PhotoGallery';
 
 
 const App =() => (
@@ -15,6 +16,7 @@ const App =() => (
 			<Nav />
       <About id="about" />
       <Dances id="dances" />
+      <Gallery id="gallery" />
       <Contact id="contact"/>
 		</div>
 		<Footer />

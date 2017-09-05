@@ -10,7 +10,7 @@ class Contact extends React.Component {
             <div className="row">
               <div className="col-sm-2"></div>
               <div className="col-sm-8">
-                <h2>Contact us</h2>
+                <h2>Contact Us</h2>
                 <p> To RSVP for the event, call (336)831-6277 or e-mail salemballnc@gmail.com</p>
                 <a target="_blank" title="find us on Facebook" href="https://www.facebook.com/Salem-Ball-18th-Century-Ball-October-7-2017-1062903163726978/"><img alt="find us on facebook" src={facebook} className="facebook-image"/></a> 
               </div>

@@ -1,5 +1,12 @@
 import React from 'react';
 
+const navModel = [
+  {link:"#about", title:"About"},
+  {link:"#dances", title:"Dances"},
+  {link:"#gallery", title:"Gallery"},
+  {link:"#contact", title:"Contact"}
+];
+
 class NavComponent extends React.Component {
 	render(){
 		return(
@@ -11,15 +18,11 @@ class NavComponent extends React.Component {
         </button>
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <a className="nav-link js-scroll-trigger" href="#about">About</a>
+          {navModel.map((item, i) => (
+            <li key={i} className="nav-item">
+              <a className="nav-link js-scroll-trigger" href={item.link}>{item.title}</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link js-scroll-trigger" href="#dances">Dances</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
+          ))}
           </ul>
         </div>
       </div>
