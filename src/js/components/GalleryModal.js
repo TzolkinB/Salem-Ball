@@ -1,10 +1,14 @@
 import React from 'react';
 
 class GalleryModal extends React.Component {
- render() {
-  if (this.props.show === false) {
-   return null;
+  constructor(props) {
+    super(props);
   }
+  
+  render() {
+    console.log('here');
+    console.log(this.props);
+    console.log(this.state);
  
   return(
     <div id="viewImage" className="modal fade" tab-index="-1">
