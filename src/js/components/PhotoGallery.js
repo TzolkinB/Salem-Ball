@@ -1,5 +1,5 @@
 import React from 'react';
-import Photo from './Photo';
+//import Photo from './Photo';
 import GalleryModal from './GalleryModal';
 
 // Create new array with URLs for images
@@ -29,21 +29,6 @@ class PhotoGallery extends React.Component {
     }
   };
 
-  openModal(url, e) {
-    this.setState({
-      showModal: true,
-      url: url
-    })
-  }
-
-
-  closeModal() {
-    this.setState({
-      showModal: false,
-      url: ''
-    })
-  }
-
 
   render() {
     if (this.props.isOpen === false) {
@@ -53,7 +38,7 @@ class PhotoGallery extends React.Component {
     return(
       <div>
         <section id="gallery">
-          <div refs='gallery-container' className='container-fluid gallery-container'>
+          <div className='container-fluid gallery-container'>
             <div className='row'>
               <div className="col-sm-2"></div>
               <div className="col-sm-8">
@@ -63,15 +48,15 @@ class PhotoGallery extends React.Component {
                   return ( 
                     <div className='col-sm-6 col-md-3 col-xl-2'>
                       <div className='gallery-card'>
-                        <Photo className='gallery-thumbnail' src={url} alt={'Image number ' + (index + 1)} />
-                        <span className='card-icon-open fa fa-expand' value={url} onClick={(e) => this.openModal(url, e)}></span>
+                        <img className='gallery-thumbnail' src={url} alt={'Image number ' + (index + 1)} />
+                        <button className='card-icon-open fa fa-expand' value={url} data-toggle="modal" data-target="#viewImage">Click</button>
                       </div>
                     </div>
                   )})
                 }
               </div>
                
-              <GalleryModal isOpen={this.state.showModal} onClick={this.closeModal} src={this.state.url} /> 
+              <GalleryModal src={this.state.url} /> 
             </div>
           </div>
         </section>
@@ -79,5 +64,6 @@ class PhotoGallery extends React.Component {
     );
   }
 }
+
 
 export default PhotoGallery;

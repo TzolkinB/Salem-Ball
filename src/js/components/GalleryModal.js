@@ -2,18 +2,21 @@ import React from 'react';
 
 class GalleryModal extends React.Component {
  render() {
-  if (this.props.isOpen === false) {
+  if (this.props.show === false) {
    return null;
   }
  
   return(
-   <div isOpen={this.props.isOpen} className='modal-overlay' onClick={this.props.onClick} name={this.props.name}>
-    <div className='modal-body'>
-     <a className='modal-close' href='#' onClick={this.props.onClick}><span className='fa fa-times'></span></a>
- 
-     <img src={this.props.src} />
+    <div id="viewImage" className="modal fade" tab-index="-1">
+      <div className="modal-dialog" role="document">
+        <div className="modal-content">
+          <div className="modal-boday">
+            <h2>Modal</h2>
+            <p> am a modal</p>
+          </div>
+        </div>
+      </div>
     </div>
-   </div>
   )
  }
 }
