@@ -19,21 +19,6 @@ let imgUrls = [
 ];
 
 
-const openModal = (url, e) => {
-  this.setState({
-    showModal: true,
-    url: url
-  })
-};
-
-
-const closeModal = () => {
-  this.setState({
-    showModal: false,
-    url: ''
-  })
-};
-
 class PhotoGallery extends React.Component {
   constructor(props) {
     super(props);
@@ -43,6 +28,22 @@ class PhotoGallery extends React.Component {
      url: ''
     }
   };
+
+  openModal(url, e) {
+    this.setState({
+      showModal: true,
+      url: url
+    })
+  }
+
+
+  closeModal() {
+    this.setState({
+      showModal: false,
+      url: ''
+    })
+  }
+
 
   render() {
     if (this.props.isOpen === false) {
