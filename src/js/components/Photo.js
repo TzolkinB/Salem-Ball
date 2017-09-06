@@ -10,6 +10,7 @@ class Photo extends React.Component {
               <div className="col-sm-2"></div>
               <div className="col-sm-8">
                 <h2>PhotoGallery</h2>
+                <img className={this.props.className} src={this.props.src} alt={this.props.alt} />
               </div>
             </div>
           </div>
@@ -20,3 +21,5 @@ class Photo extends React.Component {
 }
 
 export default Photo;
+
+//<img src={this.props.photoUrl} className="header-image img-fluid" alt={this.props.description}/>
