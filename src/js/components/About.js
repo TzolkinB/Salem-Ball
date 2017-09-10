@@ -1,6 +1,6 @@
 import React from 'react';
 import ballroom from '../../img/ballroom2.png';
-import image1 from '../../img/image1.jpg';
+import smile from '../../img/smile.jpg';
 
 class About extends React.Component {
   render() {
@@ -38,7 +38,7 @@ class About extends React.Component {
                 </ul>
               </div>
               <div className="col-sm-2">
-                <img src={image1} className="rounded-circle main-image" alt="dancers"/>
+                <img src={smile} className="rounded-circle main-image" alt="dancers"/>
               </div>
             </div>
           </div>

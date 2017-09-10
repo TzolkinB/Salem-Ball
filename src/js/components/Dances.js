@@ -1,5 +1,5 @@
 import React from 'react';
-import image2 from '../../img/image2.png';
+import dance from '../../img/dance.jpg';
 
 class Dances extends React.Component {
   render() {
@@ -8,7 +8,7 @@ class Dances extends React.Component {
         <section id="dances">
             <div className="row">
               <div className="col-sm-5">
-                <img src={image2} className="rounded-circle float-left dance-image" alt="dancing"/>
+                <img src={dance} className="rounded-circle float-left dance-image" alt="dancing"/>
               </div>
               <div className="col-sm-7">
                 <h2>Dances</h2>
