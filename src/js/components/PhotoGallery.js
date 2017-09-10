@@ -1,6 +1,6 @@
 import React from 'react';
-//import Photo from './Photo';
-import GalleryModal from './GalleryModal';
+import {Carousel} from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 // Create new array with URLs for images
 let imgUrls = [
@@ -22,19 +22,9 @@ let imgUrls = [
 class PhotoGallery extends React.Component {
   constructor(props) {
     super(props);
+  }
    
-    this.state = {
-     showModal: false,
-     url: ''
-    }
-  };
-
-
   render() {
-    if (this.props.isOpen === false) {
-     return null;
-    }
- 
     return(
       <div>
         <section id="gallery">
@@ -43,20 +33,19 @@ class PhotoGallery extends React.Component {
               <div className="col-sm-2"></div>
               <div className="col-sm-8">
                 <h2>PhotoGallery</h2>
+                <Carousel useKeyboardArrows={true} width="900px">
                 {
                   imgUrls.map((url, index) => {
                   return ( 
-                    <div className='col-sm-6 col-md-3 col-xl-2'>
-                      <div className='gallery-card'>
-                        <img className='gallery-thumbnail' src={url} alt={'Image number ' + (index + 1)} />
-                        <button className='card-icon-open fa fa-expand' value={url} data-toggle="modal" data-target="#viewImage">Click</button>
-                      </div>
+                    <div>
+                      <img src={url} />
+                      <p className="legend">Legend Here</p>
                     </div>
                   )})
                 }
+                </Carousel>
               </div>
                
-              <GalleryModal src={this.state.url} /> 
             </div>
           </div>
         </section>
