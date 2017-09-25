@@ -1,5 +1,5 @@
 import React from 'react';
-import ballroom from '../../img/ballroom2.png';
+import ballroom from '../../img/ballroom2.jpg';
 import smile from '../../img/smile.jpg';
 
 class About extends React.Component {

@@ -1,9 +1,11 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const navModel = [
   {link:"#about", title:"About"},
   {link:"#dances", title:"Dances"},
-  {link:"#gallery", title:"Gallery"},
+  {link:"#history", title: "History", blank:"_blank"},
+//  {link:"#gallery", title:"Gallery"},
   {link:"#contact", title:"Contact"}
 ];
 
@@ -20,7 +22,7 @@ class NavComponent extends React.Component {
           <ul className="navbar-nav ml-auto">
           {navModel.map((item, i) => (
             <li key={i} className="nav-item">
-              <a className="nav-link js-scroll-trigger" href={item.link}>{item.title}</a>
+              <Link className="nav-link js-scroll-trigger" to={item.link} target={item.blank || ""}>{item.title}</Link>
             </li>
           ))}
           </ul>
