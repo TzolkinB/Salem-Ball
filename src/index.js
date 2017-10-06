@@ -2,6 +2,7 @@ import React from 'react';
 import {render} from 'react-dom';
 import { BrowserRouter } from 'react-router-dom'
 import './style.css'; 
+import './../node_modules/@mcrn/hazmat/src/css/hazmat.css';
 
 import Nav     from './js/ui/NavComponent';
 import Footer  from './js/ui/FooterComponent';
@@ -11,6 +12,7 @@ import About   from './js/components/About';
 import History from './js/components/History';
 import Gallery from './js/components/PhotoGallery';
 
+import {Card} from '@mcrn/hazmat'; 
 
 const App =() => (
 	<div>
