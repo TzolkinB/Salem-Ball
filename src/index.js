@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import { BrowserRouter } from 'react-router-dom'
+import {BrowserRouter, Route, Link, Switch} from 'react-router-dom'
 import './style.css'; 
 
 import Nav     from './js/ui/NavComponent';
@@ -12,14 +12,15 @@ import History from './js/components/History';
 import Gallery from './js/components/PhotoGallery';
 
 
-const App =() => (
+const App = ({children}) => (
 	<div>
 		<div role="main">
 			<Nav />
       <About id="about" />
       <Dances id="dances" />
       {/*      <Gallery id="gallery" /> */}
-      <Contact id="contact"/>
+      {children}
+      <Contact id="contact" />
 		</div>
 		<Footer />
 	</div>
@@ -27,6 +28,15 @@ const App =() => (
 
 render((
 	<BrowserRouter>
-		<App />
-	</BrowserRouter>
+    <div>
+    <Switch>
+    <Route exact path="/" component={App}>
+      <Route path="/history" component={History} />
+    </Route>
+    </Switch>
+    </div>
+  </BrowserRouter>
 ), document.getElementById('app'))
+
+//    <Route path="/#about" component={About} />
+//	  <Route path="/#contact" component={Contact} />
