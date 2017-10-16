@@ -1,10 +1,13 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import {HashLink} from 'react-router-hash-link';
 
 const navModel = [
-  {link:"#about", title:"About"},
-  {link:"#dances", title:"Dances"},
-  {link:"#gallery", title:"Gallery"},
-  {link:"#contact", title:"Contact"}
+  {link:"/#about", title:"About"},
+  {link:"/#dances", title:"Dances"},
+  {link:"/history", title: "History", blank:"_blank"},
+//  {link:"#gallery", title:"Gallery"},
+  {link:"/#contact", title:"Contact"}
 ];
 
 class NavComponent extends React.Component {
@@ -20,9 +23,12 @@ class NavComponent extends React.Component {
           <ul className="navbar-nav ml-auto">
           {navModel.map((item, i) => (
             <li key={i} className="nav-item">
-              <a className="nav-link js-scroll-trigger" href={item.link}>{item.title}</a>
+              <HashLink className="nav-link js-scroll-trigger" to={item.link} target={item.blank || ""}>{item.title}</HashLink>
             </li>
           ))}
+            <li className="nav-item">
+              <Link className="nav-link" to="/history" target="_blank">History</Link>
+            </li>
           </ul>
         </div>
       </div>
